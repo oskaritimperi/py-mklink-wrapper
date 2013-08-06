@@ -53,8 +53,8 @@ group.add_argument('/H', dest='hardlink', default=False, action='store_true')
 group.add_argument('/h', dest='hardlink', default=False, action='store_true')
 group.add_argument('/J', dest='junction', default=False, action='store_true')
 group.add_argument('/j', dest='junction', default=False, action='store_true')
-parser.add_argument('Link', dest='link')
-parser.add_argument('Target', dest='target')
+parser.add_argument('link')
+parser.add_argument('target')
 
 args = parser.parse_args()
 

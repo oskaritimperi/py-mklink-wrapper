@@ -62,11 +62,11 @@ if (not args.symlink) and (not args.hardlink) and (not args.junction):
     args.symlink = True
 
 if args.symlink:
-    subprocess.call(['ln.exe', '-s', args.target, args.link])
+    sys.exit(subprocess.call(['ln.exe', '-s', args.target, args.link]))
 elif args.hardlink:
-    subprocess.call(['ln.exe', args.target, args.link])
+    sys.exit(subprocess.call(['ln.exe', args.target, args.link]))
 elif args.junction:
-    subprocess.call(['ln.exe', '-j', args.target, args.link])
+    sys.exit(subprocess.call(['ln.exe', '-j', args.target, args.link]))
 else:
     print("invalid options!")
     sys.exit(1)

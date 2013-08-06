@@ -16,6 +16,7 @@ You can find instruction for installing ln.exe from
 """
 import argparse
 import subprocess
+import sys
 
 def MyFormatter(raw):
     """Make the help output look a little bit more like the real deal
